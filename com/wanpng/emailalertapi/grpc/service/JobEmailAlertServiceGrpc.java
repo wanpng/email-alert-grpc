@@ -1,4 +1,4 @@
-package com.wanpng.emailalert.grpc.service;
+package com.wanpng.emailalertapi.grpc.service;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
@@ -14,29 +14,29 @@ public final class JobEmailAlertServiceGrpc {
   public static final String SERVICE_NAME = "protos.service.JobEmailAlertService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInvitation,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod;
+  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInvitation,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendJobInvitation",
-      requestType = com.wanpng.emailalert.grpc.domain.JobInvitation.class,
-      responseType = com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.class,
+      requestType = com.wanpng.emailalertapi.grpc.domain.JobInvitation.class,
+      responseType = com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInvitation,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod() {
-    io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInvitation, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod;
+  public static io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInvitation,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod() {
+    io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInvitation, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInvitationMethod;
     if ((getSendJobInvitationMethod = JobEmailAlertServiceGrpc.getSendJobInvitationMethod) == null) {
       synchronized (JobEmailAlertServiceGrpc.class) {
         if ((getSendJobInvitationMethod = JobEmailAlertServiceGrpc.getSendJobInvitationMethod) == null) {
           JobEmailAlertServiceGrpc.getSendJobInvitationMethod = getSendJobInvitationMethod =
-              io.grpc.MethodDescriptor.<com.wanpng.emailalert.grpc.domain.JobInvitation, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.wanpng.emailalertapi.grpc.domain.JobInvitation, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendJobInvitation"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.domain.JobInvitation.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.domain.JobInvitation.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
               .setSchemaDescriptor(new JobEmailAlertServiceMethodDescriptorSupplier("SendJobInvitation"))
               .build();
         }
@@ -45,29 +45,29 @@ public final class JobEmailAlertServiceGrpc {
     return getSendJobInvitationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendJobApplicationStatusUpdate",
-      requestType = com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate.class,
-      responseType = com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.class,
+      requestType = com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate.class,
+      responseType = com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod() {
-    io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod;
+  public static io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod() {
+    io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobApplicationStatusUpdateMethod;
     if ((getSendJobApplicationStatusUpdateMethod = JobEmailAlertServiceGrpc.getSendJobApplicationStatusUpdateMethod) == null) {
       synchronized (JobEmailAlertServiceGrpc.class) {
         if ((getSendJobApplicationStatusUpdateMethod = JobEmailAlertServiceGrpc.getSendJobApplicationStatusUpdateMethod) == null) {
           JobEmailAlertServiceGrpc.getSendJobApplicationStatusUpdateMethod = getSendJobApplicationStatusUpdateMethod =
-              io.grpc.MethodDescriptor.<com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendJobApplicationStatusUpdate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
               .setSchemaDescriptor(new JobEmailAlertServiceMethodDescriptorSupplier("SendJobApplicationStatusUpdate"))
               .build();
         }
@@ -76,29 +76,29 @@ public final class JobEmailAlertServiceGrpc {
     return getSendJobApplicationStatusUpdateMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInterviewRequest,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod;
+  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SendJobInterviewRequest",
-      requestType = com.wanpng.emailalert.grpc.domain.JobInterviewRequest.class,
-      responseType = com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.class,
+      requestType = com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest.class,
+      responseType = com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInterviewRequest,
-      com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod() {
-    io.grpc.MethodDescriptor<com.wanpng.emailalert.grpc.domain.JobInterviewRequest, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod;
+  public static io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod() {
+    io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendJobInterviewRequestMethod;
     if ((getSendJobInterviewRequestMethod = JobEmailAlertServiceGrpc.getSendJobInterviewRequestMethod) == null) {
       synchronized (JobEmailAlertServiceGrpc.class) {
         if ((getSendJobInterviewRequestMethod = JobEmailAlertServiceGrpc.getSendJobInterviewRequestMethod) == null) {
           JobEmailAlertServiceGrpc.getSendJobInterviewRequestMethod = getSendJobInterviewRequestMethod =
-              io.grpc.MethodDescriptor.<com.wanpng.emailalert.grpc.domain.JobInterviewRequest, com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendJobInterviewRequest"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.domain.JobInterviewRequest.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.wanpng.emailalert.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
+                  com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
               .setSchemaDescriptor(new JobEmailAlertServiceMethodDescriptorSupplier("SendJobInterviewRequest"))
               .build();
         }
@@ -157,22 +157,22 @@ public final class JobEmailAlertServiceGrpc {
 
     /**
      */
-    public void sendJobInvitation(com.wanpng.emailalert.grpc.domain.JobInvitation request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobInvitation(com.wanpng.emailalertapi.grpc.domain.JobInvitation request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendJobInvitationMethod(), responseObserver);
     }
 
     /**
      */
-    public void sendJobApplicationStatusUpdate(com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobApplicationStatusUpdate(com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendJobApplicationStatusUpdateMethod(), responseObserver);
     }
 
     /**
      */
-    public void sendJobInterviewRequest(com.wanpng.emailalert.grpc.domain.JobInterviewRequest request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobInterviewRequest(com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendJobInterviewRequestMethod(), responseObserver);
     }
 
@@ -182,22 +182,22 @@ public final class JobEmailAlertServiceGrpc {
             getSendJobInvitationMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.wanpng.emailalert.grpc.domain.JobInvitation,
-                com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>(
+                com.wanpng.emailalertapi.grpc.domain.JobInvitation,
+                com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>(
                   this, METHODID_SEND_JOB_INVITATION)))
           .addMethod(
             getSendJobApplicationStatusUpdateMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate,
-                com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>(
+                com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate,
+                com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>(
                   this, METHODID_SEND_JOB_APPLICATION_STATUS_UPDATE)))
           .addMethod(
             getSendJobInterviewRequestMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.wanpng.emailalert.grpc.domain.JobInterviewRequest,
-                com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>(
+                com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest,
+                com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>(
                   this, METHODID_SEND_JOB_INTERVIEW_REQUEST)))
           .build();
     }
@@ -219,24 +219,24 @@ public final class JobEmailAlertServiceGrpc {
 
     /**
      */
-    public void sendJobInvitation(com.wanpng.emailalert.grpc.domain.JobInvitation request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobInvitation(com.wanpng.emailalertapi.grpc.domain.JobInvitation request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendJobInvitationMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void sendJobApplicationStatusUpdate(com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobApplicationStatusUpdate(com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendJobApplicationStatusUpdateMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void sendJobInterviewRequest(com.wanpng.emailalert.grpc.domain.JobInterviewRequest request,
-        io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> responseObserver) {
+    public void sendJobInterviewRequest(com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendJobInterviewRequestMethod(), getCallOptions()), request, responseObserver);
     }
@@ -258,21 +258,21 @@ public final class JobEmailAlertServiceGrpc {
 
     /**
      */
-    public com.wanpng.emailalert.grpc.service.JobEmailAlertResponse sendJobInvitation(com.wanpng.emailalert.grpc.domain.JobInvitation request) {
+    public com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse sendJobInvitation(com.wanpng.emailalertapi.grpc.domain.JobInvitation request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendJobInvitationMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.wanpng.emailalert.grpc.service.JobEmailAlertResponse sendJobApplicationStatusUpdate(com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate request) {
+    public com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse sendJobApplicationStatusUpdate(com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendJobApplicationStatusUpdateMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.wanpng.emailalert.grpc.service.JobEmailAlertResponse sendJobInterviewRequest(com.wanpng.emailalert.grpc.domain.JobInterviewRequest request) {
+    public com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse sendJobInterviewRequest(com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendJobInterviewRequestMethod(), getCallOptions(), request);
     }
@@ -294,24 +294,24 @@ public final class JobEmailAlertServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> sendJobInvitation(
-        com.wanpng.emailalert.grpc.domain.JobInvitation request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> sendJobInvitation(
+        com.wanpng.emailalertapi.grpc.domain.JobInvitation request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendJobInvitationMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> sendJobApplicationStatusUpdate(
-        com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> sendJobApplicationStatusUpdate(
+        com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendJobApplicationStatusUpdateMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse> sendJobInterviewRequest(
-        com.wanpng.emailalert.grpc.domain.JobInterviewRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> sendJobInterviewRequest(
+        com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendJobInterviewRequestMethod(), getCallOptions()), request);
     }
@@ -339,16 +339,16 @@ public final class JobEmailAlertServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_SEND_JOB_INVITATION:
-          serviceImpl.sendJobInvitation((com.wanpng.emailalert.grpc.domain.JobInvitation) request,
-              (io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>) responseObserver);
+          serviceImpl.sendJobInvitation((com.wanpng.emailalertapi.grpc.domain.JobInvitation) request,
+              (io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>) responseObserver);
           break;
         case METHODID_SEND_JOB_APPLICATION_STATUS_UPDATE:
-          serviceImpl.sendJobApplicationStatusUpdate((com.wanpng.emailalert.grpc.domain.JobApplicationStatusUpdate) request,
-              (io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>) responseObserver);
+          serviceImpl.sendJobApplicationStatusUpdate((com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate) request,
+              (io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>) responseObserver);
           break;
         case METHODID_SEND_JOB_INTERVIEW_REQUEST:
-          serviceImpl.sendJobInterviewRequest((com.wanpng.emailalert.grpc.domain.JobInterviewRequest) request,
-              (io.grpc.stub.StreamObserver<com.wanpng.emailalert.grpc.service.JobEmailAlertResponse>) responseObserver);
+          serviceImpl.sendJobInterviewRequest((com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest) request,
+              (io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -372,7 +372,7 @@ public final class JobEmailAlertServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.wanpng.emailalert.grpc.service.JobEmailAlertServiceProtos.getDescriptor();
+      return com.wanpng.emailalertapi.grpc.service.JobEmailAlertServiceProtos.getDescriptor();
     }
 
     @java.lang.Override

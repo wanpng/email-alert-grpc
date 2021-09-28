@@ -4,7 +4,7 @@ package protos.service;
 
 option go_package = "github.com/wanpng/email-alert-grpc/grpc/service";
 option java_multiple_files = true;
-option java_package = "com.wanpng.emailalert.grpc.service";
+option java_package = "com.wanpng.emailalertapi.grpc.service";
 option java_outer_classname = "JobEmailAlertServiceProtos";
 
 import "protos/domain/JobInvitation.proto";
