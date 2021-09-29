@@ -11,12 +11,13 @@ message JobInvitation {
     string employer_id = 1;
     string employer_first_name = 2;
     string employer_last_name = 3;
-    string employer_name = 4;
-    string job_id = 5;
-    string job_title = 6;
-    bool is_lanco = 7;
-    string province = 8;
-    string career_level = 9;
-    string employment_type = 10;
-    string recipient = 11;
+    string company_name = 4;
+    string logoPath = 5;
+    string job_id = 6;
+    string job_title = 7;
+    bool is_lanco = 8;
+    string province = 9;
+    string career_level = 10;
+    string employment_type = 11;
+    string recipient = 12;
 }

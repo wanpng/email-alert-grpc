@@ -29,16 +29,17 @@ public final class JobInvitationProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!protos/domain/JobInvitation.proto\022\rpro" +
-      "tos.domain\"\375\001\n\rJobInvitation\022\023\n\013employer" +
+      "tos.domain\"\216\002\n\rJobInvitation\022\023\n\013employer" +
       "_id\030\001 \001(\t\022\033\n\023employer_first_name\030\002 \001(\t\022\032" +
-      "\n\022employer_last_name\030\003 \001(\t\022\025\n\remployer_n" +
-      "ame\030\004 \001(\t\022\016\n\006job_id\030\005 \001(\t\022\021\n\tjob_title\030\006" +
-      " \001(\t\022\020\n\010is_lanco\030\007 \001(\010\022\020\n\010province\030\010 \001(\t" +
-      "\022\024\n\014career_level\030\t \001(\t\022\027\n\017employment_typ" +
-      "e\030\n \001(\t\022\021\n\trecipient\030\013 \001(\tBm\n$com.wanpng" +
-      ".emailalertapi.grpc.domainB\023JobInvitatio" +
-      "nProtosP\001Z.github.com/wanpng/email-alert" +
-      "-grpc/grpc/domainb\006proto3"
+      "\n\022employer_last_name\030\003 \001(\t\022\024\n\014company_na" +
+      "me\030\004 \001(\t\022\020\n\010logoPath\030\005 \001(\t\022\016\n\006job_id\030\006 \001" +
+      "(\t\022\021\n\tjob_title\030\007 \001(\t\022\020\n\010is_lanco\030\010 \001(\010\022" +
+      "\020\n\010province\030\t \001(\t\022\024\n\014career_level\030\n \001(\t\022" +
+      "\027\n\017employment_type\030\013 \001(\t\022\021\n\trecipient\030\014 " +
+      "\001(\tBm\n$com.wanpng.emailalertapi.grpc.dom" +
+      "ainB\023JobInvitationProtosP\001Z.github.com/w" +
+      "anpng/email-alert-grpc/grpc/domainb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -49,7 +50,7 @@ public final class JobInvitationProtos {
     internal_static_protos_domain_JobInvitation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_domain_JobInvitation_descriptor,
-        new java.lang.String[] { "EmployerId", "EmployerFirstName", "EmployerLastName", "EmployerName", "JobId", "JobTitle", "IsLanco", "Province", "CareerLevel", "EmploymentType", "Recipient", });
+        new java.lang.String[] { "EmployerId", "EmployerFirstName", "EmployerLastName", "CompanyName", "LogoPath", "JobId", "JobTitle", "IsLanco", "Province", "CareerLevel", "EmploymentType", "Recipient", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

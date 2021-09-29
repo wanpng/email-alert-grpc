@@ -20,102 +20,114 @@ public interface JobApplicationStatusUpdateOrBuilder extends
       getEmployerIdBytes();
 
   /**
-   * <code>string employer_name = 2;</code>
-   * @return The employerName.
+   * <code>string company_name = 2;</code>
+   * @return The companyName.
    */
-  java.lang.String getEmployerName();
+  java.lang.String getCompanyName();
   /**
-   * <code>string employer_name = 2;</code>
-   * @return The bytes for employerName.
+   * <code>string company_name = 2;</code>
+   * @return The bytes for companyName.
    */
   com.google.protobuf.ByteString
-      getEmployerNameBytes();
+      getCompanyNameBytes();
 
   /**
-   * <code>string job_id = 3;</code>
+   * <code>string logoPath = 3;</code>
+   * @return The logoPath.
+   */
+  java.lang.String getLogoPath();
+  /**
+   * <code>string logoPath = 3;</code>
+   * @return The bytes for logoPath.
+   */
+  com.google.protobuf.ByteString
+      getLogoPathBytes();
+
+  /**
+   * <code>string job_id = 4;</code>
    * @return The jobId.
    */
   java.lang.String getJobId();
   /**
-   * <code>string job_id = 3;</code>
+   * <code>string job_id = 4;</code>
    * @return The bytes for jobId.
    */
   com.google.protobuf.ByteString
       getJobIdBytes();
 
   /**
-   * <code>string job_title = 4;</code>
+   * <code>string job_title = 5;</code>
    * @return The jobTitle.
    */
   java.lang.String getJobTitle();
   /**
-   * <code>string job_title = 4;</code>
+   * <code>string job_title = 5;</code>
    * @return The bytes for jobTitle.
    */
   com.google.protobuf.ByteString
       getJobTitleBytes();
 
   /**
-   * <code>string status = 5;</code>
+   * <code>string status = 6;</code>
    * @return The status.
    */
   java.lang.String getStatus();
   /**
-   * <code>string status = 5;</code>
+   * <code>string status = 6;</code>
    * @return The bytes for status.
    */
   com.google.protobuf.ByteString
       getStatusBytes();
 
   /**
-   * <code>bool is_lanco = 6;</code>
+   * <code>bool is_lanco = 7;</code>
    * @return The isLanco.
    */
   boolean getIsLanco();
 
   /**
-   * <code>string province = 7;</code>
+   * <code>string province = 8;</code>
    * @return The province.
    */
   java.lang.String getProvince();
   /**
-   * <code>string province = 7;</code>
+   * <code>string province = 8;</code>
    * @return The bytes for province.
    */
   com.google.protobuf.ByteString
       getProvinceBytes();
 
   /**
-   * <code>string career_level = 8;</code>
+   * <code>string career_level = 9;</code>
    * @return The careerLevel.
    */
   java.lang.String getCareerLevel();
   /**
-   * <code>string career_level = 8;</code>
+   * <code>string career_level = 9;</code>
    * @return The bytes for careerLevel.
    */
   com.google.protobuf.ByteString
       getCareerLevelBytes();
 
   /**
-   * <code>string employment_type = 9;</code>
+   * <code>string employment_type = 10;</code>
    * @return The employmentType.
    */
   java.lang.String getEmploymentType();
   /**
-   * <code>string employment_type = 9;</code>
+   * <code>string employment_type = 10;</code>
    * @return The bytes for employmentType.
    */
   com.google.protobuf.ByteString
       getEmploymentTypeBytes();
 
   /**
-   * <code>string recipient = 10;</code>
+   * <code>string recipient = 11;</code>
    * @return The recipient.
    */
   java.lang.String getRecipient();
   /**
-   * <code>string recipient = 10;</code>
+   * <code>string recipient = 11;</code>
    * @return The bytes for recipient.
    */
   com.google.protobuf.ByteString

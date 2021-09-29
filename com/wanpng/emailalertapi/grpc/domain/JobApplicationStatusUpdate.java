@@ -17,7 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private JobApplicationStatusUpdate() {
     employerId_ = "";
-    employerName_ = "";
+    companyName_ = "";
+    logoPath_ = "";
     jobId_ = "";
     jobTitle_ = "";
     status_ = "";
@@ -66,51 +67,57 @@ private static final long serialVersionUID = 0L;
           case 18: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            employerName_ = s;
+            companyName_ = s;
             break;
           }
           case 26: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            jobId_ = s;
+            logoPath_ = s;
             break;
           }
           case 34: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            jobTitle_ = s;
+            jobId_ = s;
             break;
           }
           case 42: {
             java.lang.String s = input.readStringRequireUtf8();
 
+            jobTitle_ = s;
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
             status_ = s;
             break;
           }
-          case 48: {
+          case 56: {
 
             isLanco_ = input.readBool();
-            break;
-          }
-          case 58: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            province_ = s;
             break;
           }
           case 66: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            careerLevel_ = s;
+            province_ = s;
             break;
           }
           case 74: {
             java.lang.String s = input.readStringRequireUtf8();
 
-            employmentType_ = s;
+            careerLevel_ = s;
             break;
           }
           case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            employmentType_ = s;
+            break;
+          }
+          case 90: {
             java.lang.String s = input.readStringRequireUtf8();
 
             recipient_ = s;
@@ -186,48 +193,86 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EMPLOYER_NAME_FIELD_NUMBER = 2;
-  private volatile java.lang.Object employerName_;
+  public static final int COMPANY_NAME_FIELD_NUMBER = 2;
+  private volatile java.lang.Object companyName_;
   /**
-   * <code>string employer_name = 2;</code>
-   * @return The employerName.
+   * <code>string company_name = 2;</code>
+   * @return The companyName.
    */
   @java.lang.Override
-  public java.lang.String getEmployerName() {
-    java.lang.Object ref = employerName_;
+  public java.lang.String getCompanyName() {
+    java.lang.Object ref = companyName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      employerName_ = s;
+      companyName_ = s;
       return s;
     }
   }
   /**
-   * <code>string employer_name = 2;</code>
-   * @return The bytes for employerName.
+   * <code>string company_name = 2;</code>
+   * @return The bytes for companyName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getEmployerNameBytes() {
-    java.lang.Object ref = employerName_;
+      getCompanyNameBytes() {
+    java.lang.Object ref = companyName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      employerName_ = b;
+      companyName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int JOB_ID_FIELD_NUMBER = 3;
+  public static final int LOGOPATH_FIELD_NUMBER = 3;
+  private volatile java.lang.Object logoPath_;
+  /**
+   * <code>string logoPath = 3;</code>
+   * @return The logoPath.
+   */
+  @java.lang.Override
+  public java.lang.String getLogoPath() {
+    java.lang.Object ref = logoPath_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      logoPath_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string logoPath = 3;</code>
+   * @return The bytes for logoPath.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLogoPathBytes() {
+    java.lang.Object ref = logoPath_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      logoPath_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int JOB_ID_FIELD_NUMBER = 4;
   private volatile java.lang.Object jobId_;
   /**
-   * <code>string job_id = 3;</code>
+   * <code>string job_id = 4;</code>
    * @return The jobId.
    */
   @java.lang.Override
@@ -244,7 +289,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string job_id = 3;</code>
+   * <code>string job_id = 4;</code>
    * @return The bytes for jobId.
    */
   @java.lang.Override
@@ -262,10 +307,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int JOB_TITLE_FIELD_NUMBER = 4;
+  public static final int JOB_TITLE_FIELD_NUMBER = 5;
   private volatile java.lang.Object jobTitle_;
   /**
-   * <code>string job_title = 4;</code>
+   * <code>string job_title = 5;</code>
    * @return The jobTitle.
    */
   @java.lang.Override
@@ -282,7 +327,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string job_title = 4;</code>
+   * <code>string job_title = 5;</code>
    * @return The bytes for jobTitle.
    */
   @java.lang.Override
@@ -300,10 +345,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STATUS_FIELD_NUMBER = 5;
+  public static final int STATUS_FIELD_NUMBER = 6;
   private volatile java.lang.Object status_;
   /**
-   * <code>string status = 5;</code>
+   * <code>string status = 6;</code>
    * @return The status.
    */
   @java.lang.Override
@@ -320,7 +365,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string status = 5;</code>
+   * <code>string status = 6;</code>
    * @return The bytes for status.
    */
   @java.lang.Override
@@ -338,10 +383,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IS_LANCO_FIELD_NUMBER = 6;
+  public static final int IS_LANCO_FIELD_NUMBER = 7;
   private boolean isLanco_;
   /**
-   * <code>bool is_lanco = 6;</code>
+   * <code>bool is_lanco = 7;</code>
    * @return The isLanco.
    */
   @java.lang.Override
@@ -349,10 +394,10 @@ private static final long serialVersionUID = 0L;
     return isLanco_;
   }
 
-  public static final int PROVINCE_FIELD_NUMBER = 7;
+  public static final int PROVINCE_FIELD_NUMBER = 8;
   private volatile java.lang.Object province_;
   /**
-   * <code>string province = 7;</code>
+   * <code>string province = 8;</code>
    * @return The province.
    */
   @java.lang.Override
@@ -369,7 +414,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string province = 7;</code>
+   * <code>string province = 8;</code>
    * @return The bytes for province.
    */
   @java.lang.Override
@@ -387,10 +432,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CAREER_LEVEL_FIELD_NUMBER = 8;
+  public static final int CAREER_LEVEL_FIELD_NUMBER = 9;
   private volatile java.lang.Object careerLevel_;
   /**
-   * <code>string career_level = 8;</code>
+   * <code>string career_level = 9;</code>
    * @return The careerLevel.
    */
   @java.lang.Override
@@ -407,7 +452,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string career_level = 8;</code>
+   * <code>string career_level = 9;</code>
    * @return The bytes for careerLevel.
    */
   @java.lang.Override
@@ -425,10 +470,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int EMPLOYMENT_TYPE_FIELD_NUMBER = 9;
+  public static final int EMPLOYMENT_TYPE_FIELD_NUMBER = 10;
   private volatile java.lang.Object employmentType_;
   /**
-   * <code>string employment_type = 9;</code>
+   * <code>string employment_type = 10;</code>
    * @return The employmentType.
    */
   @java.lang.Override
@@ -445,7 +490,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string employment_type = 9;</code>
+   * <code>string employment_type = 10;</code>
    * @return The bytes for employmentType.
    */
   @java.lang.Override
@@ -463,10 +508,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int RECIPIENT_FIELD_NUMBER = 10;
+  public static final int RECIPIENT_FIELD_NUMBER = 11;
   private volatile java.lang.Object recipient_;
   /**
-   * <code>string recipient = 10;</code>
+   * <code>string recipient = 11;</code>
    * @return The recipient.
    */
   @java.lang.Override
@@ -483,7 +528,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string recipient = 10;</code>
+   * <code>string recipient = 11;</code>
    * @return The bytes for recipient.
    */
   @java.lang.Override
@@ -518,32 +563,35 @@ private static final long serialVersionUID = 0L;
     if (!getEmployerIdBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, employerId_);
     }
-    if (!getEmployerNameBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, employerName_);
+    if (!getCompanyNameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, companyName_);
+    }
+    if (!getLogoPathBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, logoPath_);
     }
     if (!getJobIdBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, jobId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, jobId_);
     }
     if (!getJobTitleBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, jobTitle_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, jobTitle_);
     }
     if (!getStatusBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, status_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, status_);
     }
     if (isLanco_ != false) {
-      output.writeBool(6, isLanco_);
+      output.writeBool(7, isLanco_);
     }
     if (!getProvinceBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, province_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, province_);
     }
     if (!getCareerLevelBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, careerLevel_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, careerLevel_);
     }
     if (!getEmploymentTypeBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, employmentType_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, employmentType_);
     }
     if (!getRecipientBytes().isEmpty()) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, recipient_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, recipient_);
     }
     unknownFields.writeTo(output);
   }
@@ -557,33 +605,36 @@ private static final long serialVersionUID = 0L;
     if (!getEmployerIdBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, employerId_);
     }
-    if (!getEmployerNameBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, employerName_);
+    if (!getCompanyNameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, companyName_);
+    }
+    if (!getLogoPathBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, logoPath_);
     }
     if (!getJobIdBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, jobId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, jobId_);
     }
     if (!getJobTitleBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, jobTitle_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, jobTitle_);
     }
     if (!getStatusBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, status_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, status_);
     }
     if (isLanco_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(6, isLanco_);
+        .computeBoolSize(7, isLanco_);
     }
     if (!getProvinceBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, province_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, province_);
     }
     if (!getCareerLevelBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, careerLevel_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, careerLevel_);
     }
     if (!getEmploymentTypeBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, employmentType_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, employmentType_);
     }
     if (!getRecipientBytes().isEmpty()) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, recipient_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, recipient_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -602,8 +653,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getEmployerId()
         .equals(other.getEmployerId())) return false;
-    if (!getEmployerName()
-        .equals(other.getEmployerName())) return false;
+    if (!getCompanyName()
+        .equals(other.getCompanyName())) return false;
+    if (!getLogoPath()
+        .equals(other.getLogoPath())) return false;
     if (!getJobId()
         .equals(other.getJobId())) return false;
     if (!getJobTitle()
@@ -633,8 +686,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + EMPLOYER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getEmployerId().hashCode();
-    hash = (37 * hash) + EMPLOYER_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getEmployerName().hashCode();
+    hash = (37 * hash) + COMPANY_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getCompanyName().hashCode();
+    hash = (37 * hash) + LOGOPATH_FIELD_NUMBER;
+    hash = (53 * hash) + getLogoPath().hashCode();
     hash = (37 * hash) + JOB_ID_FIELD_NUMBER;
     hash = (53 * hash) + getJobId().hashCode();
     hash = (37 * hash) + JOB_TITLE_FIELD_NUMBER;
@@ -787,7 +842,9 @@ private static final long serialVersionUID = 0L;
       super.clear();
       employerId_ = "";
 
-      employerName_ = "";
+      companyName_ = "";
+
+      logoPath_ = "";
 
       jobId_ = "";
 
@@ -832,7 +889,8 @@ private static final long serialVersionUID = 0L;
     public com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate buildPartial() {
       com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate result = new com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdate(this);
       result.employerId_ = employerId_;
-      result.employerName_ = employerName_;
+      result.companyName_ = companyName_;
+      result.logoPath_ = logoPath_;
       result.jobId_ = jobId_;
       result.jobTitle_ = jobTitle_;
       result.status_ = status_;
@@ -893,8 +951,12 @@ private static final long serialVersionUID = 0L;
         employerId_ = other.employerId_;
         onChanged();
       }
-      if (!other.getEmployerName().isEmpty()) {
-        employerName_ = other.employerName_;
+      if (!other.getCompanyName().isEmpty()) {
+        companyName_ = other.companyName_;
+        onChanged();
+      }
+      if (!other.getLogoPath().isEmpty()) {
+        logoPath_ = other.logoPath_;
         onChanged();
       }
       if (!other.getJobId().isEmpty()) {
@@ -1033,85 +1095,161 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object employerName_ = "";
+    private java.lang.Object companyName_ = "";
     /**
-     * <code>string employer_name = 2;</code>
-     * @return The employerName.
+     * <code>string company_name = 2;</code>
+     * @return The companyName.
      */
-    public java.lang.String getEmployerName() {
-      java.lang.Object ref = employerName_;
+    public java.lang.String getCompanyName() {
+      java.lang.Object ref = companyName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        employerName_ = s;
+        companyName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string employer_name = 2;</code>
-     * @return The bytes for employerName.
+     * <code>string company_name = 2;</code>
+     * @return The bytes for companyName.
      */
     public com.google.protobuf.ByteString
-        getEmployerNameBytes() {
-      java.lang.Object ref = employerName_;
+        getCompanyNameBytes() {
+      java.lang.Object ref = companyName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        employerName_ = b;
+        companyName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string employer_name = 2;</code>
-     * @param value The employerName to set.
+     * <code>string company_name = 2;</code>
+     * @param value The companyName to set.
      * @return This builder for chaining.
      */
-    public Builder setEmployerName(
+    public Builder setCompanyName(
         java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
   
-      employerName_ = value;
+      companyName_ = value;
       onChanged();
       return this;
     }
     /**
-     * <code>string employer_name = 2;</code>
+     * <code>string company_name = 2;</code>
      * @return This builder for chaining.
      */
-    public Builder clearEmployerName() {
+    public Builder clearCompanyName() {
       
-      employerName_ = getDefaultInstance().getEmployerName();
+      companyName_ = getDefaultInstance().getCompanyName();
       onChanged();
       return this;
     }
     /**
-     * <code>string employer_name = 2;</code>
-     * @param value The bytes for employerName to set.
+     * <code>string company_name = 2;</code>
+     * @param value The bytes for companyName to set.
      * @return This builder for chaining.
      */
-    public Builder setEmployerNameBytes(
+    public Builder setCompanyNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
       
-      employerName_ = value;
+      companyName_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object logoPath_ = "";
+    /**
+     * <code>string logoPath = 3;</code>
+     * @return The logoPath.
+     */
+    public java.lang.String getLogoPath() {
+      java.lang.Object ref = logoPath_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        logoPath_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string logoPath = 3;</code>
+     * @return The bytes for logoPath.
+     */
+    public com.google.protobuf.ByteString
+        getLogoPathBytes() {
+      java.lang.Object ref = logoPath_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        logoPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string logoPath = 3;</code>
+     * @param value The logoPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLogoPath(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      logoPath_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string logoPath = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLogoPath() {
+      
+      logoPath_ = getDefaultInstance().getLogoPath();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string logoPath = 3;</code>
+     * @param value The bytes for logoPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLogoPathBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      logoPath_ = value;
       onChanged();
       return this;
     }
 
     private java.lang.Object jobId_ = "";
     /**
-     * <code>string job_id = 3;</code>
+     * <code>string job_id = 4;</code>
      * @return The jobId.
      */
     public java.lang.String getJobId() {
@@ -1127,7 +1265,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string job_id = 3;</code>
+     * <code>string job_id = 4;</code>
      * @return The bytes for jobId.
      */
     public com.google.protobuf.ByteString
@@ -1144,7 +1282,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string job_id = 3;</code>
+     * <code>string job_id = 4;</code>
      * @param value The jobId to set.
      * @return This builder for chaining.
      */
@@ -1159,7 +1297,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string job_id = 3;</code>
+     * <code>string job_id = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearJobId() {
@@ -1169,7 +1307,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string job_id = 3;</code>
+     * <code>string job_id = 4;</code>
      * @param value The bytes for jobId to set.
      * @return This builder for chaining.
      */
@@ -1187,7 +1325,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object jobTitle_ = "";
     /**
-     * <code>string job_title = 4;</code>
+     * <code>string job_title = 5;</code>
      * @return The jobTitle.
      */
     public java.lang.String getJobTitle() {
@@ -1203,7 +1341,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string job_title = 4;</code>
+     * <code>string job_title = 5;</code>
      * @return The bytes for jobTitle.
      */
     public com.google.protobuf.ByteString
@@ -1220,7 +1358,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string job_title = 4;</code>
+     * <code>string job_title = 5;</code>
      * @param value The jobTitle to set.
      * @return This builder for chaining.
      */
@@ -1235,7 +1373,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string job_title = 4;</code>
+     * <code>string job_title = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearJobTitle() {
@@ -1245,7 +1383,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string job_title = 4;</code>
+     * <code>string job_title = 5;</code>
      * @param value The bytes for jobTitle to set.
      * @return This builder for chaining.
      */
@@ -1263,7 +1401,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object status_ = "";
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 6;</code>
      * @return The status.
      */
     public java.lang.String getStatus() {
@@ -1279,7 +1417,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 6;</code>
      * @return The bytes for status.
      */
     public com.google.protobuf.ByteString
@@ -1296,7 +1434,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 6;</code>
      * @param value The status to set.
      * @return This builder for chaining.
      */
@@ -1311,7 +1449,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearStatus() {
@@ -1321,7 +1459,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string status = 5;</code>
+     * <code>string status = 6;</code>
      * @param value The bytes for status to set.
      * @return This builder for chaining.
      */
@@ -1339,7 +1477,7 @@ private static final long serialVersionUID = 0L;
 
     private boolean isLanco_ ;
     /**
-     * <code>bool is_lanco = 6;</code>
+     * <code>bool is_lanco = 7;</code>
      * @return The isLanco.
      */
     @java.lang.Override
@@ -1347,7 +1485,7 @@ private static final long serialVersionUID = 0L;
       return isLanco_;
     }
     /**
-     * <code>bool is_lanco = 6;</code>
+     * <code>bool is_lanco = 7;</code>
      * @param value The isLanco to set.
      * @return This builder for chaining.
      */
@@ -1358,7 +1496,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>bool is_lanco = 6;</code>
+     * <code>bool is_lanco = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearIsLanco() {
@@ -1370,7 +1508,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object province_ = "";
     /**
-     * <code>string province = 7;</code>
+     * <code>string province = 8;</code>
      * @return The province.
      */
     public java.lang.String getProvince() {
@@ -1386,7 +1524,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string province = 7;</code>
+     * <code>string province = 8;</code>
      * @return The bytes for province.
      */
     public com.google.protobuf.ByteString
@@ -1403,7 +1541,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string province = 7;</code>
+     * <code>string province = 8;</code>
      * @param value The province to set.
      * @return This builder for chaining.
      */
@@ -1418,7 +1556,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string province = 7;</code>
+     * <code>string province = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearProvince() {
@@ -1428,7 +1566,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string province = 7;</code>
+     * <code>string province = 8;</code>
      * @param value The bytes for province to set.
      * @return This builder for chaining.
      */
@@ -1446,7 +1584,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object careerLevel_ = "";
     /**
-     * <code>string career_level = 8;</code>
+     * <code>string career_level = 9;</code>
      * @return The careerLevel.
      */
     public java.lang.String getCareerLevel() {
@@ -1462,7 +1600,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string career_level = 8;</code>
+     * <code>string career_level = 9;</code>
      * @return The bytes for careerLevel.
      */
     public com.google.protobuf.ByteString
@@ -1479,7 +1617,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string career_level = 8;</code>
+     * <code>string career_level = 9;</code>
      * @param value The careerLevel to set.
      * @return This builder for chaining.
      */
@@ -1494,7 +1632,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string career_level = 8;</code>
+     * <code>string career_level = 9;</code>
      * @return This builder for chaining.
      */
     public Builder clearCareerLevel() {
@@ -1504,7 +1642,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string career_level = 8;</code>
+     * <code>string career_level = 9;</code>
      * @param value The bytes for careerLevel to set.
      * @return This builder for chaining.
      */
@@ -1522,7 +1660,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object employmentType_ = "";
     /**
-     * <code>string employment_type = 9;</code>
+     * <code>string employment_type = 10;</code>
      * @return The employmentType.
      */
     public java.lang.String getEmploymentType() {
@@ -1538,7 +1676,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string employment_type = 9;</code>
+     * <code>string employment_type = 10;</code>
      * @return The bytes for employmentType.
      */
     public com.google.protobuf.ByteString
@@ -1555,7 +1693,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string employment_type = 9;</code>
+     * <code>string employment_type = 10;</code>
      * @param value The employmentType to set.
      * @return This builder for chaining.
      */
@@ -1570,7 +1708,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string employment_type = 9;</code>
+     * <code>string employment_type = 10;</code>
      * @return This builder for chaining.
      */
     public Builder clearEmploymentType() {
@@ -1580,7 +1718,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string employment_type = 9;</code>
+     * <code>string employment_type = 10;</code>
      * @param value The bytes for employmentType to set.
      * @return This builder for chaining.
      */
@@ -1598,7 +1736,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object recipient_ = "";
     /**
-     * <code>string recipient = 10;</code>
+     * <code>string recipient = 11;</code>
      * @return The recipient.
      */
     public java.lang.String getRecipient() {
@@ -1614,7 +1752,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recipient = 10;</code>
+     * <code>string recipient = 11;</code>
      * @return The bytes for recipient.
      */
     public com.google.protobuf.ByteString
@@ -1631,7 +1769,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string recipient = 10;</code>
+     * <code>string recipient = 11;</code>
      * @param value The recipient to set.
      * @return This builder for chaining.
      */
@@ -1646,7 +1784,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recipient = 10;</code>
+     * <code>string recipient = 11;</code>
      * @return This builder for chaining.
      */
     public Builder clearRecipient() {
@@ -1656,7 +1794,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string recipient = 10;</code>
+     * <code>string recipient = 11;</code>
      * @param value The bytes for recipient to set.
      * @return This builder for chaining.
      */

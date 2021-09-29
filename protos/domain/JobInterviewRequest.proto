@@ -13,15 +13,16 @@ message JobInterviewRequest {
     string employer_id = 1;
     string employer_first_name = 2;
     string employer_last_name = 3;
-    string employer_name = 4;
-    google.protobuf.Timestamp interviewDate = 5;
-    string interviewStart = 6;
-    string interviewEnd = 7;
-    string job_id = 8;
-    string job_title = 9;
-    bool is_lanco = 10;
-    string province = 11;
-    string career_level = 12;
-    string employment_type = 13;
-    string recipient = 14;
+    string company_name = 4;
+    string logoPath = 5;
+    google.protobuf.Timestamp interviewDate = 6;
+    string interviewStart = 7;
+    string interviewEnd = 8;
+    string job_id = 9;
+    string job_title = 10;
+    bool is_lanco = 11;
+    string province = 12;
+    string career_level = 13;
+    string employment_type = 14;
+    string recipient = 15;
 }

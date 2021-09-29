@@ -9,13 +9,14 @@ option java_outer_classname = "JobApplicationStatusUpdateProtos";
 
 message JobApplicationStatusUpdate {
     string employer_id = 1;
-    string employer_name = 2;
-    string job_id = 3;
-    string job_title = 4;
-    string status = 5;
-    bool is_lanco = 6;
-    string province = 7;
-    string career_level = 8;
-    string employment_type = 9;
-    string recipient = 10;
+    string company_name = 2;
+    string logoPath = 3;
+    string job_id = 4;
+    string job_title = 5;
+    string status = 6;
+    bool is_lanco = 7;
+    string province = 8;
+    string career_level = 9;
+    string employment_type = 10;
+    string recipient = 11;
 }

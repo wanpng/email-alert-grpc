@@ -44,129 +44,141 @@ public interface JobInterviewRequestOrBuilder extends
       getEmployerLastNameBytes();
 
   /**
-   * <code>string employer_name = 4;</code>
-   * @return The employerName.
+   * <code>string company_name = 4;</code>
+   * @return The companyName.
    */
-  java.lang.String getEmployerName();
+  java.lang.String getCompanyName();
   /**
-   * <code>string employer_name = 4;</code>
-   * @return The bytes for employerName.
+   * <code>string company_name = 4;</code>
+   * @return The bytes for companyName.
    */
   com.google.protobuf.ByteString
-      getEmployerNameBytes();
+      getCompanyNameBytes();
 
   /**
-   * <code>.google.protobuf.Timestamp interviewDate = 5;</code>
+   * <code>string logoPath = 5;</code>
+   * @return The logoPath.
+   */
+  java.lang.String getLogoPath();
+  /**
+   * <code>string logoPath = 5;</code>
+   * @return The bytes for logoPath.
+   */
+  com.google.protobuf.ByteString
+      getLogoPathBytes();
+
+  /**
+   * <code>.google.protobuf.Timestamp interviewDate = 6;</code>
    * @return Whether the interviewDate field is set.
    */
   boolean hasInterviewDate();
   /**
-   * <code>.google.protobuf.Timestamp interviewDate = 5;</code>
+   * <code>.google.protobuf.Timestamp interviewDate = 6;</code>
    * @return The interviewDate.
    */
   com.google.protobuf.Timestamp getInterviewDate();
   /**
-   * <code>.google.protobuf.Timestamp interviewDate = 5;</code>
+   * <code>.google.protobuf.Timestamp interviewDate = 6;</code>
    */
   com.google.protobuf.TimestampOrBuilder getInterviewDateOrBuilder();
 
   /**
-   * <code>string interviewStart = 6;</code>
+   * <code>string interviewStart = 7;</code>
    * @return The interviewStart.
    */
   java.lang.String getInterviewStart();
   /**
-   * <code>string interviewStart = 6;</code>
+   * <code>string interviewStart = 7;</code>
    * @return The bytes for interviewStart.
    */
   com.google.protobuf.ByteString
       getInterviewStartBytes();
 
   /**
-   * <code>string interviewEnd = 7;</code>
+   * <code>string interviewEnd = 8;</code>
    * @return The interviewEnd.
    */
   java.lang.String getInterviewEnd();
   /**
-   * <code>string interviewEnd = 7;</code>
+   * <code>string interviewEnd = 8;</code>
    * @return The bytes for interviewEnd.
    */
   com.google.protobuf.ByteString
       getInterviewEndBytes();
 
   /**
-   * <code>string job_id = 8;</code>
+   * <code>string job_id = 9;</code>
    * @return The jobId.
    */
   java.lang.String getJobId();
   /**
-   * <code>string job_id = 8;</code>
+   * <code>string job_id = 9;</code>
    * @return The bytes for jobId.
    */
   com.google.protobuf.ByteString
       getJobIdBytes();
 
   /**
-   * <code>string job_title = 9;</code>
+   * <code>string job_title = 10;</code>
    * @return The jobTitle.
    */
   java.lang.String getJobTitle();
   /**
-   * <code>string job_title = 9;</code>
+   * <code>string job_title = 10;</code>
    * @return The bytes for jobTitle.
    */
   com.google.protobuf.ByteString
       getJobTitleBytes();
 
   /**
-   * <code>bool is_lanco = 10;</code>
+   * <code>bool is_lanco = 11;</code>
    * @return The isLanco.
    */
   boolean getIsLanco();
 
   /**
-   * <code>string province = 11;</code>
+   * <code>string province = 12;</code>
    * @return The province.
    */
   java.lang.String getProvince();
   /**
-   * <code>string province = 11;</code>
+   * <code>string province = 12;</code>
    * @return The bytes for province.
    */
   com.google.protobuf.ByteString
       getProvinceBytes();
 
   /**
-   * <code>string career_level = 12;</code>
+   * <code>string career_level = 13;</code>
    * @return The careerLevel.
    */
   java.lang.String getCareerLevel();
   /**
-   * <code>string career_level = 12;</code>
+   * <code>string career_level = 13;</code>
    * @return The bytes for careerLevel.
    */
   com.google.protobuf.ByteString
       getCareerLevelBytes();
 
   /**
-   * <code>string employment_type = 13;</code>
+   * <code>string employment_type = 14;</code>
    * @return The employmentType.
    */
   java.lang.String getEmploymentType();
   /**
-   * <code>string employment_type = 13;</code>
+   * <code>string employment_type = 14;</code>
    * @return The bytes for employmentType.
    */
   com.google.protobuf.ByteString
       getEmploymentTypeBytes();
 
   /**
-   * <code>string recipient = 14;</code>
+   * <code>string recipient = 15;</code>
    * @return The recipient.
    */
   java.lang.String getRecipient();
   /**
-   * <code>string recipient = 14;</code>
+   * <code>string recipient = 15;</code>
    * @return The bytes for recipient.
    */
   com.google.protobuf.ByteString
