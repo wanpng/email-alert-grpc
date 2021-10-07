@@ -13,11 +13,15 @@ import "protos/domain/JobInterviewRequest.proto";
 
 service JobEmailAlertService {
     rpc SendJobInvitation(protos.domain.JobInvitation) returns (JobEmailAlertResponse);
-    rpc SendJobApplicationStatusUpdate(protos.domain.JobApplicationStatusUpdate) returns (JobEmailAlertResponse);
+    rpc SendJobApplicationStatusUpdate(SendJobApplicationStatusUpdateRequest) returns (JobEmailAlertResponse);
     rpc SendJobInterviewRequest(protos.domain.JobInterviewRequest) returns (JobEmailAlertResponse);
 }
 
 message JobEmailAlertResponse {
     int32 status_id = 1;
     string status = 2;
+}
+
+message SendJobApplicationStatusUpdateRequest {
+    repeated protos.domain.JobApplicationStatusUpdate jobApplicationStatusUpdates = 1;
 }

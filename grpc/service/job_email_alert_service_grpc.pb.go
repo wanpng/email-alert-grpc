@@ -20,7 +20,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type JobEmailAlertServiceClient interface {
 	SendJobInvitation(ctx context.Context, in *domain.JobInvitation, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
-	SendJobApplicationStatusUpdate(ctx context.Context, in *domain.JobApplicationStatusUpdate, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
+	SendJobApplicationStatusUpdate(ctx context.Context, in *SendJobApplicationStatusUpdateRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
 	SendJobInterviewRequest(ctx context.Context, in *domain.JobInterviewRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
 }
 
@@ -41,7 +41,7 @@ func (c *jobEmailAlertServiceClient) SendJobInvitation(ctx context.Context, in *
 	return out, nil
 }
 
-func (c *jobEmailAlertServiceClient) SendJobApplicationStatusUpdate(ctx context.Context, in *domain.JobApplicationStatusUpdate, opts ...grpc.CallOption) (*JobEmailAlertResponse, error) {
+func (c *jobEmailAlertServiceClient) SendJobApplicationStatusUpdate(ctx context.Context, in *SendJobApplicationStatusUpdateRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error) {
 	out := new(JobEmailAlertResponse)
 	err := c.cc.Invoke(ctx, "/protos.service.JobEmailAlertService/SendJobApplicationStatusUpdate", in, out, opts...)
 	if err != nil {
@@ -64,7 +64,7 @@ func (c *jobEmailAlertServiceClient) SendJobInterviewRequest(ctx context.Context
 // for forward compatibility
 type JobEmailAlertServiceServer interface {
 	SendJobInvitation(context.Context, *domain.JobInvitation) (*JobEmailAlertResponse, error)
-	SendJobApplicationStatusUpdate(context.Context, *domain.JobApplicationStatusUpdate) (*JobEmailAlertResponse, error)
+	SendJobApplicationStatusUpdate(context.Context, *SendJobApplicationStatusUpdateRequest) (*JobEmailAlertResponse, error)
 	SendJobInterviewRequest(context.Context, *domain.JobInterviewRequest) (*JobEmailAlertResponse, error)
 	mustEmbedUnimplementedJobEmailAlertServiceServer()
 }
@@ -76,7 +76,7 @@ type UnimplementedJobEmailAlertServiceServer struct {
 func (UnimplementedJobEmailAlertServiceServer) SendJobInvitation(context.Context, *domain.JobInvitation) (*JobEmailAlertResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendJobInvitation not implemented")
 }
-func (UnimplementedJobEmailAlertServiceServer) SendJobApplicationStatusUpdate(context.Context, *domain.JobApplicationStatusUpdate) (*JobEmailAlertResponse, error) {
+func (UnimplementedJobEmailAlertServiceServer) SendJobApplicationStatusUpdate(context.Context, *SendJobApplicationStatusUpdateRequest) (*JobEmailAlertResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendJobApplicationStatusUpdate not implemented")
 }
 func (UnimplementedJobEmailAlertServiceServer) SendJobInterviewRequest(context.Context, *domain.JobInterviewRequest) (*JobEmailAlertResponse, error) {
@@ -114,7 +114,7 @@ func _JobEmailAlertService_SendJobInvitation_Handler(srv interface{}, ctx contex
 }
 
 func _JobEmailAlertService_SendJobApplicationStatusUpdate_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(domain.JobApplicationStatusUpdate)
+	in := new(SendJobApplicationStatusUpdateRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -126,7 +126,7 @@ func _JobEmailAlertService_SendJobApplicationStatusUpdate_Handler(srv interface{
 		FullMethod: "/protos.service.JobEmailAlertService/SendJobApplicationStatusUpdate",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(JobEmailAlertServiceServer).SendJobApplicationStatusUpdate(ctx, req.(*domain.JobApplicationStatusUpdate))
+		return srv.(JobEmailAlertServiceServer).SendJobApplicationStatusUpdate(ctx, req.(*SendJobApplicationStatusUpdateRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

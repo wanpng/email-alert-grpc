@@ -19,6 +19,11 @@ public final class JobEmailAlertServiceProtos {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_protos_service_JobEmailAlertResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_protos_service_SendJobApplicationStatusUpdateRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_protos_service_SendJobApplicationStatusUpdateRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -34,18 +39,21 @@ public final class JobEmailAlertServiceProtos {
       "icationStatusUpdate.proto\032\'protos/domain" +
       "/JobInterviewRequest.proto\":\n\025JobEmailAl" +
       "ertResponse\022\021\n\tstatus_id\030\001 \001(\005\022\016\n\006status" +
-      "\030\002 \001(\t2\312\002\n\024JobEmailAlertService\022X\n\021SendJ" +
-      "obInvitation\022\034.protos.domain.JobInvitati" +
-      "on\032%.protos.service.JobEmailAlertRespons" +
-      "e\022r\n\036SendJobApplicationStatusUpdate\022).pr" +
-      "otos.domain.JobApplicationStatusUpdate\032%" +
-      ".protos.service.JobEmailAlertResponse\022d\n" +
-      "\027SendJobInterviewRequest\022\".protos.domain" +
-      ".JobInterviewRequest\032%.protos.service.Jo" +
-      "bEmailAlertResponseBv\n%com.wanpng.emaila" +
-      "lertapi.grpc.serviceB\032JobEmailAlertServi" +
-      "ceProtosP\001Z/github.com/wanpng/email-aler" +
-      "t-grpc/grpc/serviceb\006proto3"
+      "\030\002 \001(\t\"w\n%SendJobApplicationStatusUpdate" +
+      "Request\022N\n\033jobApplicationStatusUpdates\030\001" +
+      " \003(\0132).protos.domain.JobApplicationStatu" +
+      "sUpdate2\326\002\n\024JobEmailAlertService\022X\n\021Send" +
+      "JobInvitation\022\034.protos.domain.JobInvitat" +
+      "ion\032%.protos.service.JobEmailAlertRespon" +
+      "se\022~\n\036SendJobApplicationStatusUpdate\0225.p" +
+      "rotos.service.SendJobApplicationStatusUp" +
+      "dateRequest\032%.protos.service.JobEmailAle" +
+      "rtResponse\022d\n\027SendJobInterviewRequest\022\"." +
+      "protos.domain.JobInterviewRequest\032%.prot" +
+      "os.service.JobEmailAlertResponseBv\n%com." +
+      "wanpng.emailalertapi.grpc.serviceB\032JobEm" +
+      "ailAlertServiceProtosP\001Z/github.com/wanp" +
+      "ng/email-alert-grpc/grpc/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -60,6 +68,12 @@ public final class JobEmailAlertServiceProtos {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_service_JobEmailAlertResponse_descriptor,
         new java.lang.String[] { "StatusId", "Status", });
+    internal_static_protos_service_SendJobApplicationStatusUpdateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_protos_service_SendJobApplicationStatusUpdateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_protos_service_SendJobApplicationStatusUpdateRequest_descriptor,
+        new java.lang.String[] { "JobApplicationStatusUpdates", });
     com.wanpng.emailalertapi.grpc.domain.JobInvitationProtos.getDescriptor();
     com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdateProtos.getDescriptor();
     com.wanpng.emailalertapi.grpc.domain.JobInterviewRequestProtos.getDescriptor();
