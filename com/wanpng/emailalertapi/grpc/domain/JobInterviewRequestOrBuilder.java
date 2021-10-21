@@ -183,4 +183,28 @@ public interface JobInterviewRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getRecipientBytes();
+
+  /**
+   * <code>string interview_title = 16;</code>
+   * @return The interviewTitle.
+   */
+  java.lang.String getInterviewTitle();
+  /**
+   * <code>string interview_title = 16;</code>
+   * @return The bytes for interviewTitle.
+   */
+  com.google.protobuf.ByteString
+      getInterviewTitleBytes();
+
+  /**
+   * <code>string interview_message = 17;</code>
+   * @return The interviewMessage.
+   */
+  java.lang.String getInterviewMessage();
+  /**
+   * <code>string interview_message = 17;</code>
+   * @return The bytes for interviewMessage.
+   */
+  com.google.protobuf.ByteString
+      getInterviewMessageBytes();
 }

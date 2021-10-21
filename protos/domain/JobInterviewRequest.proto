@@ -25,4 +25,6 @@ message JobInterviewRequest {
     string career_level = 13;
     string employment_type = 14;
     string recipient = 15;
+    string interview_title = 16;
+    string interview_message = 17;
 }

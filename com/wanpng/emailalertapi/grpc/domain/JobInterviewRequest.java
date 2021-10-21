@@ -29,6 +29,8 @@ private static final long serialVersionUID = 0L;
     careerLevel_ = "";
     employmentType_ = "";
     recipient_ = "";
+    interviewTitle_ = "";
+    interviewMessage_ = "";
   }
 
   @java.lang.Override
@@ -155,6 +157,18 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             recipient_ = s;
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            interviewTitle_ = s;
+            break;
+          }
+          case 138: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            interviewMessage_ = s;
             break;
           }
           default: {
@@ -720,6 +734,82 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int INTERVIEW_TITLE_FIELD_NUMBER = 16;
+  private volatile java.lang.Object interviewTitle_;
+  /**
+   * <code>string interview_title = 16;</code>
+   * @return The interviewTitle.
+   */
+  @java.lang.Override
+  public java.lang.String getInterviewTitle() {
+    java.lang.Object ref = interviewTitle_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      interviewTitle_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string interview_title = 16;</code>
+   * @return The bytes for interviewTitle.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getInterviewTitleBytes() {
+    java.lang.Object ref = interviewTitle_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      interviewTitle_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int INTERVIEW_MESSAGE_FIELD_NUMBER = 17;
+  private volatile java.lang.Object interviewMessage_;
+  /**
+   * <code>string interview_message = 17;</code>
+   * @return The interviewMessage.
+   */
+  @java.lang.Override
+  public java.lang.String getInterviewMessage() {
+    java.lang.Object ref = interviewMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      interviewMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string interview_message = 17;</code>
+   * @return The bytes for interviewMessage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getInterviewMessageBytes() {
+    java.lang.Object ref = interviewMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      interviewMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -779,6 +869,12 @@ private static final long serialVersionUID = 0L;
     if (!getRecipientBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 15, recipient_);
     }
+    if (!getInterviewTitleBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, interviewTitle_);
+    }
+    if (!getInterviewMessageBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, interviewMessage_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -835,6 +931,12 @@ private static final long serialVersionUID = 0L;
     if (!getRecipientBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, recipient_);
     }
+    if (!getInterviewTitleBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, interviewTitle_);
+    }
+    if (!getInterviewMessageBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, interviewMessage_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -883,6 +985,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmploymentType())) return false;
     if (!getRecipient()
         .equals(other.getRecipient())) return false;
+    if (!getInterviewTitle()
+        .equals(other.getInterviewTitle())) return false;
+    if (!getInterviewMessage()
+        .equals(other.getInterviewMessage())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -927,6 +1033,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEmploymentType().hashCode();
     hash = (37 * hash) + RECIPIENT_FIELD_NUMBER;
     hash = (53 * hash) + getRecipient().hashCode();
+    hash = (37 * hash) + INTERVIEW_TITLE_FIELD_NUMBER;
+    hash = (53 * hash) + getInterviewTitle().hashCode();
+    hash = (37 * hash) + INTERVIEW_MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getInterviewMessage().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1094,6 +1204,10 @@ private static final long serialVersionUID = 0L;
 
       recipient_ = "";
 
+      interviewTitle_ = "";
+
+      interviewMessage_ = "";
+
       return this;
     }
 
@@ -1139,6 +1253,8 @@ private static final long serialVersionUID = 0L;
       result.careerLevel_ = careerLevel_;
       result.employmentType_ = employmentType_;
       result.recipient_ = recipient_;
+      result.interviewTitle_ = interviewTitle_;
+      result.interviewMessage_ = interviewMessage_;
       onBuilt();
       return result;
     }
@@ -1243,6 +1359,14 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getRecipient().isEmpty()) {
         recipient_ = other.recipient_;
+        onChanged();
+      }
+      if (!other.getInterviewTitle().isEmpty()) {
+        interviewTitle_ = other.interviewTitle_;
+        onChanged();
+      }
+      if (!other.getInterviewMessage().isEmpty()) {
+        interviewMessage_ = other.interviewMessage_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -2408,6 +2532,158 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       recipient_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object interviewTitle_ = "";
+    /**
+     * <code>string interview_title = 16;</code>
+     * @return The interviewTitle.
+     */
+    public java.lang.String getInterviewTitle() {
+      java.lang.Object ref = interviewTitle_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        interviewTitle_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string interview_title = 16;</code>
+     * @return The bytes for interviewTitle.
+     */
+    public com.google.protobuf.ByteString
+        getInterviewTitleBytes() {
+      java.lang.Object ref = interviewTitle_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        interviewTitle_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string interview_title = 16;</code>
+     * @param value The interviewTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInterviewTitle(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      interviewTitle_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string interview_title = 16;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInterviewTitle() {
+      
+      interviewTitle_ = getDefaultInstance().getInterviewTitle();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string interview_title = 16;</code>
+     * @param value The bytes for interviewTitle to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInterviewTitleBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      interviewTitle_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object interviewMessage_ = "";
+    /**
+     * <code>string interview_message = 17;</code>
+     * @return The interviewMessage.
+     */
+    public java.lang.String getInterviewMessage() {
+      java.lang.Object ref = interviewMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        interviewMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string interview_message = 17;</code>
+     * @return The bytes for interviewMessage.
+     */
+    public com.google.protobuf.ByteString
+        getInterviewMessageBytes() {
+      java.lang.Object ref = interviewMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        interviewMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string interview_message = 17;</code>
+     * @param value The interviewMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInterviewMessage(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      interviewMessage_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string interview_message = 17;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInterviewMessage() {
+      
+      interviewMessage_ = getDefaultInstance().getInterviewMessage();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string interview_message = 17;</code>
+     * @param value The bytes for interviewMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInterviewMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      interviewMessage_ = value;
       onChanged();
       return this;
     }
