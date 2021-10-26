@@ -22,6 +22,7 @@ type JobEmailAlertServiceClient interface {
 	SendJobInvitation(ctx context.Context, in *domain.JobInvitation, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
 	SendJobApplicationStatusUpdate(ctx context.Context, in *SendJobApplicationStatusUpdateRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
 	SendJobInterviewRequest(ctx context.Context, in *domain.JobInterviewRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
+	SendDailyJobAlert(ctx context.Context, in *SendDailyJobAlertRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error)
 }
 
 type jobEmailAlertServiceClient struct {
@@ -59,6 +60,15 @@ func (c *jobEmailAlertServiceClient) SendJobInterviewRequest(ctx context.Context
 	return out, nil
 }
 
+func (c *jobEmailAlertServiceClient) SendDailyJobAlert(ctx context.Context, in *SendDailyJobAlertRequest, opts ...grpc.CallOption) (*JobEmailAlertResponse, error) {
+	out := new(JobEmailAlertResponse)
+	err := c.cc.Invoke(ctx, "/protos.service.JobEmailAlertService/SendDailyJobAlert", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // JobEmailAlertServiceServer is the server API for JobEmailAlertService service.
 // All implementations must embed UnimplementedJobEmailAlertServiceServer
 // for forward compatibility
@@ -66,6 +76,7 @@ type JobEmailAlertServiceServer interface {
 	SendJobInvitation(context.Context, *domain.JobInvitation) (*JobEmailAlertResponse, error)
 	SendJobApplicationStatusUpdate(context.Context, *SendJobApplicationStatusUpdateRequest) (*JobEmailAlertResponse, error)
 	SendJobInterviewRequest(context.Context, *domain.JobInterviewRequest) (*JobEmailAlertResponse, error)
+	SendDailyJobAlert(context.Context, *SendDailyJobAlertRequest) (*JobEmailAlertResponse, error)
 	mustEmbedUnimplementedJobEmailAlertServiceServer()
 }
 
@@ -81,6 +92,9 @@ func (UnimplementedJobEmailAlertServiceServer) SendJobApplicationStatusUpdate(co
 }
 func (UnimplementedJobEmailAlertServiceServer) SendJobInterviewRequest(context.Context, *domain.JobInterviewRequest) (*JobEmailAlertResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendJobInterviewRequest not implemented")
+}
+func (UnimplementedJobEmailAlertServiceServer) SendDailyJobAlert(context.Context, *SendDailyJobAlertRequest) (*JobEmailAlertResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SendDailyJobAlert not implemented")
 }
 func (UnimplementedJobEmailAlertServiceServer) mustEmbedUnimplementedJobEmailAlertServiceServer() {}
 
@@ -149,6 +163,24 @@ func _JobEmailAlertService_SendJobInterviewRequest_Handler(srv interface{}, ctx 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _JobEmailAlertService_SendDailyJobAlert_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(SendDailyJobAlertRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(JobEmailAlertServiceServer).SendDailyJobAlert(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/protos.service.JobEmailAlertService/SendDailyJobAlert",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(JobEmailAlertServiceServer).SendDailyJobAlert(ctx, req.(*SendDailyJobAlertRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // JobEmailAlertService_ServiceDesc is the grpc.ServiceDesc for JobEmailAlertService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -167,6 +199,10 @@ var JobEmailAlertService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SendJobInterviewRequest",
 			Handler:    _JobEmailAlertService_SendJobInterviewRequest_Handler,
+		},
+		{
+			MethodName: "SendDailyJobAlert",
+			Handler:    _JobEmailAlertService_SendDailyJobAlert_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

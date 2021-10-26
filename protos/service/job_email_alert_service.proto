@@ -10,11 +10,13 @@ option java_outer_classname = "JobEmailAlertServiceProtos";
 import "protos/domain/JobInvitation.proto";
 import "protos/domain/JobApplicationStatusUpdate.proto";
 import "protos/domain/JobInterviewRequest.proto";
+import "protos/domain/DailyJobAlert.proto";
 
 service JobEmailAlertService {
     rpc SendJobInvitation(protos.domain.JobInvitation) returns (JobEmailAlertResponse);
     rpc SendJobApplicationStatusUpdate(SendJobApplicationStatusUpdateRequest) returns (JobEmailAlertResponse);
     rpc SendJobInterviewRequest(protos.domain.JobInterviewRequest) returns (JobEmailAlertResponse);
+    rpc SendDailyJobAlert(SendDailyJobAlertRequest) returns (JobEmailAlertResponse);
 }
 
 message JobEmailAlertResponse {
@@ -24,4 +26,8 @@ message JobEmailAlertResponse {
 
 message SendJobApplicationStatusUpdateRequest {
     repeated protos.domain.JobApplicationStatusUpdate jobApplicationStatusUpdates = 1;
+}
+
+message SendDailyJobAlertRequest {
+    repeated protos.domain.DailyJobAlert daily_job_alerts = 1;
 }

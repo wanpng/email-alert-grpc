@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package protos.domain;
+
+option go_package = "github.com/wanpng/email-alert-grpc/grpc/domain";
+option java_multiple_files = true;
+option java_package = "com.wanpng.emailalertapi.grpc.domain";
+option java_outer_classname = "DailyJobAlertProtos";
+
+import "protos/domain/EmailAlertJob.proto";
+
+message DailyJobAlert {
+    string email = 1;
+    repeated protos.domain.EmailAlertJob email_alert_jobs =  2;
+    string header_title = 3;
+    string url = 4;
+}

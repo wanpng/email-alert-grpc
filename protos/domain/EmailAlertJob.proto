@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package protos.domain;
+
+option go_package = "github.com/wanpng/email-alert-grpc/grpc/domain";
+option java_multiple_files = true;
+option java_package = "com.wanpng.emailalertapi.grpc.domain";
+option java_outer_classname = "EmailAlertJobProtos";
+
+message EmailAlertJob {
+    string job_title = 1;
+    string company_name = 2;
+    string company_logo = 3;
+    bool is_lanco = 4;
+    string province = 5;
+    string career_level = 6;
+    string employment_type = 7;
+}

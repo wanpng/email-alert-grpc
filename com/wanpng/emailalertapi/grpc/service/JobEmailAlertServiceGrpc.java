@@ -107,6 +107,37 @@ public final class JobEmailAlertServiceGrpc {
     return getSendJobInterviewRequestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendDailyJobAlertMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SendDailyJobAlert",
+      requestType = com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest.class,
+      responseType = com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest,
+      com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendDailyJobAlertMethod() {
+    io.grpc.MethodDescriptor<com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> getSendDailyJobAlertMethod;
+    if ((getSendDailyJobAlertMethod = JobEmailAlertServiceGrpc.getSendDailyJobAlertMethod) == null) {
+      synchronized (JobEmailAlertServiceGrpc.class) {
+        if ((getSendDailyJobAlertMethod = JobEmailAlertServiceGrpc.getSendDailyJobAlertMethod) == null) {
+          JobEmailAlertServiceGrpc.getSendDailyJobAlertMethod = getSendDailyJobAlertMethod =
+              io.grpc.MethodDescriptor.<com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest, com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SendDailyJobAlert"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new JobEmailAlertServiceMethodDescriptorSupplier("SendDailyJobAlert"))
+              .build();
+        }
+      }
+    }
+    return getSendDailyJobAlertMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class JobEmailAlertServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendJobInterviewRequestMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void sendDailyJobAlert(com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSendDailyJobAlertMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -199,6 +237,13 @@ public final class JobEmailAlertServiceGrpc {
                 com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest,
                 com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>(
                   this, METHODID_SEND_JOB_INTERVIEW_REQUEST)))
+          .addMethod(
+            getSendDailyJobAlertMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest,
+                com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>(
+                  this, METHODID_SEND_DAILY_JOB_ALERT)))
           .build();
     }
   }
@@ -240,6 +285,14 @@ public final class JobEmailAlertServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSendJobInterviewRequestMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void sendDailyJobAlert(com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest request,
+        io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSendDailyJobAlertMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +328,13 @@ public final class JobEmailAlertServiceGrpc {
     public com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse sendJobInterviewRequest(com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSendJobInterviewRequestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse sendDailyJobAlert(com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSendDailyJobAlertMethod(), getCallOptions(), request);
     }
   }
 
@@ -315,11 +375,20 @@ public final class JobEmailAlertServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSendJobInterviewRequestMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse> sendDailyJobAlert(
+        com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSendDailyJobAlertMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SEND_JOB_INVITATION = 0;
   private static final int METHODID_SEND_JOB_APPLICATION_STATUS_UPDATE = 1;
   private static final int METHODID_SEND_JOB_INTERVIEW_REQUEST = 2;
+  private static final int METHODID_SEND_DAILY_JOB_ALERT = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -348,6 +417,10 @@ public final class JobEmailAlertServiceGrpc {
           break;
         case METHODID_SEND_JOB_INTERVIEW_REQUEST:
           serviceImpl.sendJobInterviewRequest((com.wanpng.emailalertapi.grpc.domain.JobInterviewRequest) request,
+              (io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>) responseObserver);
+          break;
+        case METHODID_SEND_DAILY_JOB_ALERT:
+          serviceImpl.sendDailyJobAlert((com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest) request,
               (io.grpc.stub.StreamObserver<com.wanpng.emailalertapi.grpc.service.JobEmailAlertResponse>) responseObserver);
           break;
         default:
@@ -414,6 +487,7 @@ public final class JobEmailAlertServiceGrpc {
               .addMethod(getSendJobInvitationMethod())
               .addMethod(getSendJobApplicationStatusUpdateMethod())
               .addMethod(getSendJobInterviewRequestMethod())
+              .addMethod(getSendDailyJobAlertMethod())
               .build();
         }
       }
