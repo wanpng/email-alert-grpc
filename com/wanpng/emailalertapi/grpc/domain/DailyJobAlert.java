@@ -80,6 +80,11 @@ private static final long serialVersionUID = 0L;
             url_ = s;
             break;
           }
+          case 40: {
+
+            count_ = input.readInt32();
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -269,6 +274,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int COUNT_FIELD_NUMBER = 5;
+  private int count_;
+  /**
+   * <code>int32 count = 5;</code>
+   * @return The count.
+   */
+  @java.lang.Override
+  public int getCount() {
+    return count_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -295,6 +311,9 @@ private static final long serialVersionUID = 0L;
     if (!getUrlBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, url_);
     }
+    if (count_ != 0) {
+      output.writeInt32(5, count_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -316,6 +335,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!getUrlBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, url_);
+    }
+    if (count_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(5, count_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -340,6 +363,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getHeaderTitle())) return false;
     if (!getUrl()
         .equals(other.getUrl())) return false;
+    if (getCount()
+        != other.getCount()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -361,6 +386,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getHeaderTitle().hashCode();
     hash = (37 * hash) + URL_FIELD_NUMBER;
     hash = (53 * hash) + getUrl().hashCode();
+    hash = (37 * hash) + COUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getCount();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -507,6 +534,8 @@ private static final long serialVersionUID = 0L;
 
       url_ = "";
 
+      count_ = 0;
+
       return this;
     }
 
@@ -546,6 +575,7 @@ private static final long serialVersionUID = 0L;
       }
       result.headerTitle_ = headerTitle_;
       result.url_ = url_;
+      result.count_ = count_;
       onBuilt();
       return result;
     }
@@ -631,6 +661,9 @@ private static final long serialVersionUID = 0L;
       if (!other.getUrl().isEmpty()) {
         url_ = other.url_;
         onChanged();
+      }
+      if (other.getCount() != 0) {
+        setCount(other.getCount());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1126,6 +1159,37 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       url_ = value;
+      onChanged();
+      return this;
+    }
+
+    private int count_ ;
+    /**
+     * <code>int32 count = 5;</code>
+     * @return The count.
+     */
+    @java.lang.Override
+    public int getCount() {
+      return count_;
+    }
+    /**
+     * <code>int32 count = 5;</code>
+     * @param value The count to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCount(int value) {
+      
+      count_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 count = 5;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCount() {
+      
+      count_ = 0;
       onChanged();
       return this;
     }

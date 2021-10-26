@@ -66,4 +66,10 @@ public interface DailyJobAlertOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUrlBytes();
+
+  /**
+   * <code>int32 count = 5;</code>
+   * @return The count.
+   */
+  int getCount();
 }
