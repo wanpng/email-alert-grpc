@@ -22,6 +22,7 @@ private static final long serialVersionUID = 0L;
     province_ = "";
     careerLevel_ = "";
     employmentType_ = "";
+    url_ = "";
   }
 
   @java.lang.Override
@@ -93,6 +94,12 @@ private static final long serialVersionUID = 0L;
             java.lang.String s = input.readStringRequireUtf8();
 
             employmentType_ = s;
+            break;
+          }
+          case 66: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            url_ = s;
             break;
           }
           default: {
@@ -366,6 +373,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int URL_FIELD_NUMBER = 8;
+  private volatile java.lang.Object url_;
+  /**
+   * <code>string url = 8;</code>
+   * @return The url.
+   */
+  @java.lang.Override
+  public java.lang.String getUrl() {
+    java.lang.Object ref = url_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      url_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string url = 8;</code>
+   * @return The bytes for url.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getUrlBytes() {
+    java.lang.Object ref = url_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      url_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -401,6 +446,9 @@ private static final long serialVersionUID = 0L;
     if (!getEmploymentTypeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, employmentType_);
     }
+    if (!getUrlBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, url_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -432,6 +480,9 @@ private static final long serialVersionUID = 0L;
     if (!getEmploymentTypeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, employmentType_);
     }
+    if (!getUrlBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, url_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -461,6 +512,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCareerLevel())) return false;
     if (!getEmploymentType()
         .equals(other.getEmploymentType())) return false;
+    if (!getUrl()
+        .equals(other.getUrl())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -487,6 +540,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getCareerLevel().hashCode();
     hash = (37 * hash) + EMPLOYMENT_TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getEmploymentType().hashCode();
+    hash = (37 * hash) + URL_FIELD_NUMBER;
+    hash = (53 * hash) + getUrl().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -634,6 +689,8 @@ private static final long serialVersionUID = 0L;
 
       employmentType_ = "";
 
+      url_ = "";
+
       return this;
     }
 
@@ -667,6 +724,7 @@ private static final long serialVersionUID = 0L;
       result.province_ = province_;
       result.careerLevel_ = careerLevel_;
       result.employmentType_ = employmentType_;
+      result.url_ = url_;
       onBuilt();
       return result;
     }
@@ -740,6 +798,10 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getEmploymentType().isEmpty()) {
         employmentType_ = other.employmentType_;
+        onChanged();
+      }
+      if (!other.getUrl().isEmpty()) {
+        url_ = other.url_;
         onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
@@ -1254,6 +1316,82 @@ private static final long serialVersionUID = 0L;
   checkByteStringIsUtf8(value);
       
       employmentType_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object url_ = "";
+    /**
+     * <code>string url = 8;</code>
+     * @return The url.
+     */
+    public java.lang.String getUrl() {
+      java.lang.Object ref = url_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        url_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string url = 8;</code>
+     * @return The bytes for url.
+     */
+    public com.google.protobuf.ByteString
+        getUrlBytes() {
+      java.lang.Object ref = url_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        url_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string url = 8;</code>
+     * @param value The url to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrl(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      url_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string url = 8;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearUrl() {
+      
+      url_ = getDefaultInstance().getUrl();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string url = 8;</code>
+     * @param value The bytes for url to set.
+     * @return This builder for chaining.
+     */
+    public Builder setUrlBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      url_ = value;
       onChanged();
       return this;
     }

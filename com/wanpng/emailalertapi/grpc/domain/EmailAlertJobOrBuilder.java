@@ -84,4 +84,16 @@ public interface EmailAlertJobOrBuilder extends
    */
   com.google.protobuf.ByteString
       getEmploymentTypeBytes();
+
+  /**
+   * <code>string url = 8;</code>
+   * @return The url.
+   */
+  java.lang.String getUrl();
+  /**
+   * <code>string url = 8;</code>
+   * @return The bytes for url.
+   */
+  com.google.protobuf.ByteString
+      getUrlBytes();
 }
