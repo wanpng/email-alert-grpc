@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private SendDailyJobAlertRequest() {
+    subject_ = "";
     dailyJobAlerts_ = java.util.Collections.emptyList();
   }
 
@@ -51,6 +52,12 @@ private static final long serialVersionUID = 0L;
             done = true;
             break;
           case 10: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            subject_ = s;
+            break;
+          }
+          case 18: {
             if (!((mutable_bitField0_ & 0x00000001) != 0)) {
               dailyJobAlerts_ = new java.util.ArrayList<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert>();
               mutable_bitField0_ |= 0x00000001;
@@ -94,17 +101,55 @@ private static final long serialVersionUID = 0L;
             com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest.class, com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest.Builder.class);
   }
 
-  public static final int DAILY_JOB_ALERTS_FIELD_NUMBER = 1;
+  public static final int SUBJECT_FIELD_NUMBER = 1;
+  private volatile java.lang.Object subject_;
+  /**
+   * <code>string subject = 1;</code>
+   * @return The subject.
+   */
+  @java.lang.Override
+  public java.lang.String getSubject() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      subject_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string subject = 1;</code>
+   * @return The bytes for subject.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSubjectBytes() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      subject_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int DAILY_JOB_ALERTS_FIELD_NUMBER = 2;
   private java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> dailyJobAlerts_;
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   @java.lang.Override
   public java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> getDailyJobAlertsList() {
     return dailyJobAlerts_;
   }
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder> 
@@ -112,21 +157,21 @@ private static final long serialVersionUID = 0L;
     return dailyJobAlerts_;
   }
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   @java.lang.Override
   public int getDailyJobAlertsCount() {
     return dailyJobAlerts_.size();
   }
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   @java.lang.Override
   public com.wanpng.emailalertapi.grpc.domain.DailyJobAlert getDailyJobAlerts(int index) {
     return dailyJobAlerts_.get(index);
   }
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   @java.lang.Override
   public com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder getDailyJobAlertsOrBuilder(
@@ -148,8 +193,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!getSubjectBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, subject_);
+    }
     for (int i = 0; i < dailyJobAlerts_.size(); i++) {
-      output.writeMessage(1, dailyJobAlerts_.get(i));
+      output.writeMessage(2, dailyJobAlerts_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -160,9 +208,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!getSubjectBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, subject_);
+    }
     for (int i = 0; i < dailyJobAlerts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, dailyJobAlerts_.get(i));
+        .computeMessageSize(2, dailyJobAlerts_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -179,6 +230,8 @@ private static final long serialVersionUID = 0L;
     }
     com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest other = (com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest) obj;
 
+    if (!getSubject()
+        .equals(other.getSubject())) return false;
     if (!getDailyJobAlertsList()
         .equals(other.getDailyJobAlertsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
@@ -192,6 +245,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+    hash = (53 * hash) + getSubject().hashCode();
     if (getDailyJobAlertsCount() > 0) {
       hash = (37 * hash) + DAILY_JOB_ALERTS_FIELD_NUMBER;
       hash = (53 * hash) + getDailyJobAlertsList().hashCode();
@@ -330,6 +385,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      subject_ = "";
+
       if (dailyJobAlertsBuilder_ == null) {
         dailyJobAlerts_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -363,6 +420,7 @@ private static final long serialVersionUID = 0L;
     public com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest buildPartial() {
       com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest result = new com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest(this);
       int from_bitField0_ = bitField0_;
+      result.subject_ = subject_;
       if (dailyJobAlertsBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
           dailyJobAlerts_ = java.util.Collections.unmodifiableList(dailyJobAlerts_);
@@ -420,6 +478,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest other) {
       if (other == com.wanpng.emailalertapi.grpc.service.SendDailyJobAlertRequest.getDefaultInstance()) return this;
+      if (!other.getSubject().isEmpty()) {
+        subject_ = other.subject_;
+        onChanged();
+      }
       if (dailyJobAlertsBuilder_ == null) {
         if (!other.dailyJobAlerts_.isEmpty()) {
           if (dailyJobAlerts_.isEmpty()) {
@@ -476,6 +538,82 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object subject_ = "";
+    /**
+     * <code>string subject = 1;</code>
+     * @return The subject.
+     */
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @return The bytes for subject.
+     */
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @param value The subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubject(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      subject_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubject() {
+      
+      subject_ = getDefaultInstance().getSubject();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 1;</code>
+     * @param value The bytes for subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubjectBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      subject_ = value;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> dailyJobAlerts_ =
       java.util.Collections.emptyList();
     private void ensureDailyJobAlertsIsMutable() {
@@ -489,7 +627,7 @@ private static final long serialVersionUID = 0L;
         com.wanpng.emailalertapi.grpc.domain.DailyJobAlert, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder, com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder> dailyJobAlertsBuilder_;
 
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> getDailyJobAlertsList() {
       if (dailyJobAlertsBuilder_ == null) {
@@ -499,7 +637,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public int getDailyJobAlertsCount() {
       if (dailyJobAlertsBuilder_ == null) {
@@ -509,7 +647,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public com.wanpng.emailalertapi.grpc.domain.DailyJobAlert getDailyJobAlerts(int index) {
       if (dailyJobAlertsBuilder_ == null) {
@@ -519,7 +657,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder setDailyJobAlerts(
         int index, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert value) {
@@ -536,7 +674,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder setDailyJobAlerts(
         int index, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder builderForValue) {
@@ -550,7 +688,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder addDailyJobAlerts(com.wanpng.emailalertapi.grpc.domain.DailyJobAlert value) {
       if (dailyJobAlertsBuilder_ == null) {
@@ -566,7 +704,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder addDailyJobAlerts(
         int index, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert value) {
@@ -583,7 +721,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder addDailyJobAlerts(
         com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder builderForValue) {
@@ -597,7 +735,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder addDailyJobAlerts(
         int index, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder builderForValue) {
@@ -611,7 +749,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder addAllDailyJobAlerts(
         java.lang.Iterable<? extends com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> values) {
@@ -626,7 +764,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder clearDailyJobAlerts() {
       if (dailyJobAlertsBuilder_ == null) {
@@ -639,7 +777,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public Builder removeDailyJobAlerts(int index) {
       if (dailyJobAlertsBuilder_ == null) {
@@ -652,14 +790,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder getDailyJobAlertsBuilder(
         int index) {
       return getDailyJobAlertsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder getDailyJobAlertsOrBuilder(
         int index) {
@@ -669,7 +807,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public java.util.List<? extends com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder> 
          getDailyJobAlertsOrBuilderList() {
@@ -680,14 +818,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder addDailyJobAlertsBuilder() {
       return getDailyJobAlertsFieldBuilder().addBuilder(
           com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.getDefaultInstance());
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder addDailyJobAlertsBuilder(
         int index) {
@@ -695,7 +833,7 @@ private static final long serialVersionUID = 0L;
           index, com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.getDefaultInstance());
     }
     /**
-     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+     * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
      */
     public java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert.Builder> 
          getDailyJobAlertsBuilderList() {

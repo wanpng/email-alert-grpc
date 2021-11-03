@@ -29,15 +29,14 @@ public final class EmailAlertJobProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n!protos/domain/EmailAlertJob.proto\022\rpro" +
-      "tos.domain\"\277\001\n\rEmailAlertJob\022\021\n\tjob_titl" +
+      "tos.domain\"\256\001\n\rEmailAlertJob\022\021\n\tjob_titl" +
       "e\030\001 \001(\t\022\024\n\014company_name\030\002 \001(\t\022\024\n\014company" +
       "_logo\030\003 \001(\t\022\020\n\010is_lanco\030\004 \001(\010\022\020\n\010provinc" +
       "e\030\005 \001(\t\022\024\n\014career_level\030\006 \001(\t\022\027\n\017employm" +
-      "ent_type\030\007 \001(\t\022\013\n\003url\030\010 \001(\t\022\017\n\007subject\030\t" +
-      " \001(\tBm\n$com.wanpng.emailalertapi.grpc.do" +
-      "mainB\023EmailAlertJobProtosP\001Z.github.com/" +
-      "wanpng/email-alert-grpc/grpc/domainb\006pro" +
-      "to3"
+      "ent_type\030\007 \001(\t\022\013\n\003url\030\010 \001(\tBm\n$com.wanpn" +
+      "g.emailalertapi.grpc.domainB\023EmailAlertJ" +
+      "obProtosP\001Z.github.com/wanpng/email-aler" +
+      "t-grpc/grpc/domainb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48,7 +47,7 @@ public final class EmailAlertJobProtos {
     internal_static_protos_domain_EmailAlertJob_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_domain_EmailAlertJob_descriptor,
-        new java.lang.String[] { "JobTitle", "CompanyName", "CompanyLogo", "IsLanco", "Province", "CareerLevel", "EmploymentType", "Url", "Subject", });
+        new java.lang.String[] { "JobTitle", "CompanyName", "CompanyLogo", "IsLanco", "Province", "CareerLevel", "EmploymentType", "Url", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

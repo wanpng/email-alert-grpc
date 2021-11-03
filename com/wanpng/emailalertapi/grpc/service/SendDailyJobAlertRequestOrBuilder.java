@@ -8,25 +8,37 @@ public interface SendDailyJobAlertRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>string subject = 1;</code>
+   * @return The subject.
+   */
+  java.lang.String getSubject();
+  /**
+   * <code>string subject = 1;</code>
+   * @return The bytes for subject.
+   */
+  com.google.protobuf.ByteString
+      getSubjectBytes();
+
+  /**
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> 
       getDailyJobAlertsList();
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   com.wanpng.emailalertapi.grpc.domain.DailyJobAlert getDailyJobAlerts(int index);
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   int getDailyJobAlertsCount();
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   java.util.List<? extends com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder> 
       getDailyJobAlertsOrBuilderList();
   /**
-   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 1;</code>
+   * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   com.wanpng.emailalertapi.grpc.domain.DailyJobAlertOrBuilder getDailyJobAlertsOrBuilder(
       int index);
