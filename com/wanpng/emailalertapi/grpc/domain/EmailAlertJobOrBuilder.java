@@ -96,4 +96,16 @@ public interface EmailAlertJobOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUrlBytes();
+
+  /**
+   * <code>string subject = 9;</code>
+   * @return The subject.
+   */
+  java.lang.String getSubject();
+  /**
+   * <code>string subject = 9;</code>
+   * @return The bytes for subject.
+   */
+  com.google.protobuf.ByteString
+      getSubjectBytes();
 }

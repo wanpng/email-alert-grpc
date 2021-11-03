@@ -16,4 +16,5 @@ message EmailAlertJob {
     string career_level = 6;
     string employment_type = 7;
     string url = 8;
+    string subject = 9;
 }
