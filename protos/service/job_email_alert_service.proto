@@ -29,6 +29,5 @@ message SendJobApplicationStatusUpdateRequest {
 }
 
 message SendDailyJobAlertRequest {
-    string subject = 1;
     repeated protos.domain.DailyJobAlert daily_job_alerts = 2;
 }

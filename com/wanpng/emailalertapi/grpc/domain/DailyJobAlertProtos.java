@@ -30,13 +30,13 @@ public final class DailyJobAlertProtos {
     java.lang.String[] descriptorData = {
       "\n!protos/domain/DailyJobAlert.proto\022\rpro" +
       "tos.domain\032!protos/domain/EmailAlertJob." +
-      "proto\"\210\001\n\rDailyJobAlert\022\r\n\005email\030\001 \001(\t\0226" +
+      "proto\"\231\001\n\rDailyJobAlert\022\r\n\005email\030\001 \001(\t\0226" +
       "\n\020email_alert_jobs\030\002 \003(\0132\034.protos.domain" +
       ".EmailAlertJob\022\024\n\014header_title\030\003 \001(\t\022\013\n\003" +
-      "url\030\004 \001(\t\022\r\n\005count\030\005 \001(\005Bm\n$com.wanpng.e" +
-      "mailalertapi.grpc.domainB\023DailyJobAlertP" +
-      "rotosP\001Z.github.com/wanpng/email-alert-g" +
-      "rpc/grpc/domainb\006proto3"
+      "url\030\004 \001(\t\022\r\n\005count\030\005 \001(\005\022\017\n\007subject\030\006 \001(" +
+      "\tBm\n$com.wanpng.emailalertapi.grpc.domai" +
+      "nB\023DailyJobAlertProtosP\001Z.github.com/wan" +
+      "png/email-alert-grpc/grpc/domainb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -48,7 +48,7 @@ public final class DailyJobAlertProtos {
     internal_static_protos_domain_DailyJobAlert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_domain_DailyJobAlert_descriptor,
-        new java.lang.String[] { "Email", "EmailAlertJobs", "HeaderTitle", "Url", "Count", });
+        new java.lang.String[] { "Email", "EmailAlertJobs", "HeaderTitle", "Url", "Count", "Subject", });
     com.wanpng.emailalertapi.grpc.domain.EmailAlertJobProtos.getDescriptor();
   }
 

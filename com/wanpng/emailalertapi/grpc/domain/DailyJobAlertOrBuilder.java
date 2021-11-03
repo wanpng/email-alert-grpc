@@ -72,4 +72,16 @@ public interface DailyJobAlertOrBuilder extends
    * @return The count.
    */
   int getCount();
+
+  /**
+   * <code>string subject = 6;</code>
+   * @return The subject.
+   */
+  java.lang.String getSubject();
+  /**
+   * <code>string subject = 6;</code>
+   * @return The bytes for subject.
+   */
+  com.google.protobuf.ByteString
+      getSubjectBytes();
 }

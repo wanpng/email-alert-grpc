@@ -48,23 +48,23 @@ public final class JobEmailAlertServiceProtos {
       "\t\"w\n%SendJobApplicationStatusUpdateReque" +
       "st\022N\n\033jobApplicationStatusUpdates\030\001 \003(\0132" +
       ").protos.domain.JobApplicationStatusUpda" +
-      "te\"c\n\030SendDailyJobAlertRequest\022\017\n\007subjec" +
-      "t\030\001 \001(\t\0226\n\020daily_job_alerts\030\002 \003(\0132\034.prot" +
-      "os.domain.DailyJobAlert2\274\003\n\024JobEmailAler" +
-      "tService\022X\n\021SendJobInvitation\022\034.protos.d" +
-      "omain.JobInvitation\032%.protos.service.Job" +
-      "EmailAlertResponse\022~\n\036SendJobApplication" +
-      "StatusUpdate\0225.protos.service.SendJobApp" +
-      "licationStatusUpdateRequest\032%.protos.ser" +
-      "vice.JobEmailAlertResponse\022d\n\027SendJobInt" +
-      "erviewRequest\022\".protos.domain.JobIntervi" +
-      "ewRequest\032%.protos.service.JobEmailAlert" +
-      "Response\022d\n\021SendDailyJobAlert\022(.protos.s" +
-      "ervice.SendDailyJobAlertRequest\032%.protos" +
-      ".service.JobEmailAlertResponseBv\n%com.wa" +
-      "npng.emailalertapi.grpc.serviceB\032JobEmai" +
-      "lAlertServiceProtosP\001Z/github.com/wanpng" +
-      "/email-alert-grpc/grpc/serviceb\006proto3"
+      "te\"R\n\030SendDailyJobAlertRequest\0226\n\020daily_" +
+      "job_alerts\030\002 \003(\0132\034.protos.domain.DailyJo" +
+      "bAlert2\274\003\n\024JobEmailAlertService\022X\n\021SendJ" +
+      "obInvitation\022\034.protos.domain.JobInvitati" +
+      "on\032%.protos.service.JobEmailAlertRespons" +
+      "e\022~\n\036SendJobApplicationStatusUpdate\0225.pr" +
+      "otos.service.SendJobApplicationStatusUpd" +
+      "ateRequest\032%.protos.service.JobEmailAler" +
+      "tResponse\022d\n\027SendJobInterviewRequest\022\".p" +
+      "rotos.domain.JobInterviewRequest\032%.proto" +
+      "s.service.JobEmailAlertResponse\022d\n\021SendD" +
+      "ailyJobAlert\022(.protos.service.SendDailyJ" +
+      "obAlertRequest\032%.protos.service.JobEmail" +
+      "AlertResponseBv\n%com.wanpng.emailalertap" +
+      "i.grpc.serviceB\032JobEmailAlertServiceProt" +
+      "osP\001Z/github.com/wanpng/email-alert-grpc" +
+      "/grpc/serviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -91,7 +91,7 @@ public final class JobEmailAlertServiceProtos {
     internal_static_protos_service_SendDailyJobAlertRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_protos_service_SendDailyJobAlertRequest_descriptor,
-        new java.lang.String[] { "Subject", "DailyJobAlerts", });
+        new java.lang.String[] { "DailyJobAlerts", });
     com.wanpng.emailalertapi.grpc.domain.JobInvitationProtos.getDescriptor();
     com.wanpng.emailalertapi.grpc.domain.JobApplicationStatusUpdateProtos.getDescriptor();
     com.wanpng.emailalertapi.grpc.domain.JobInterviewRequestProtos.getDescriptor();

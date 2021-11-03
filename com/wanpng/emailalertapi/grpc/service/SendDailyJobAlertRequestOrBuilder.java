@@ -8,18 +8,6 @@ public interface SendDailyJobAlertRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string subject = 1;</code>
-   * @return The subject.
-   */
-  java.lang.String getSubject();
-  /**
-   * <code>string subject = 1;</code>
-   * @return The bytes for subject.
-   */
-  com.google.protobuf.ByteString
-      getSubjectBytes();
-
-  /**
    * <code>repeated .protos.domain.DailyJobAlert daily_job_alerts = 2;</code>
    */
   java.util.List<com.wanpng.emailalertapi.grpc.domain.DailyJobAlert> 

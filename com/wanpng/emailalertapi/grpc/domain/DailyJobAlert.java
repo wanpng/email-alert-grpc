@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     emailAlertJobs_ = java.util.Collections.emptyList();
     headerTitle_ = "";
     url_ = "";
+    subject_ = "";
   }
 
   @java.lang.Override
@@ -83,6 +84,12 @@ private static final long serialVersionUID = 0L;
           case 40: {
 
             count_ = input.readInt32();
+            break;
+          }
+          case 50: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            subject_ = s;
             break;
           }
           default: {
@@ -285,6 +292,44 @@ private static final long serialVersionUID = 0L;
     return count_;
   }
 
+  public static final int SUBJECT_FIELD_NUMBER = 6;
+  private volatile java.lang.Object subject_;
+  /**
+   * <code>string subject = 6;</code>
+   * @return The subject.
+   */
+  @java.lang.Override
+  public java.lang.String getSubject() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      subject_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string subject = 6;</code>
+   * @return The bytes for subject.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSubjectBytes() {
+    java.lang.Object ref = subject_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      subject_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -314,6 +359,9 @@ private static final long serialVersionUID = 0L;
     if (count_ != 0) {
       output.writeInt32(5, count_);
     }
+    if (!getSubjectBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, subject_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -340,6 +388,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(5, count_);
     }
+    if (!getSubjectBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, subject_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -365,6 +416,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUrl())) return false;
     if (getCount()
         != other.getCount()) return false;
+    if (!getSubject()
+        .equals(other.getSubject())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -388,6 +441,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUrl().hashCode();
     hash = (37 * hash) + COUNT_FIELD_NUMBER;
     hash = (53 * hash) + getCount();
+    hash = (37 * hash) + SUBJECT_FIELD_NUMBER;
+    hash = (53 * hash) + getSubject().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -536,6 +591,8 @@ private static final long serialVersionUID = 0L;
 
       count_ = 0;
 
+      subject_ = "";
+
       return this;
     }
 
@@ -576,6 +633,7 @@ private static final long serialVersionUID = 0L;
       result.headerTitle_ = headerTitle_;
       result.url_ = url_;
       result.count_ = count_;
+      result.subject_ = subject_;
       onBuilt();
       return result;
     }
@@ -664,6 +722,10 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getCount() != 0) {
         setCount(other.getCount());
+      }
+      if (!other.getSubject().isEmpty()) {
+        subject_ = other.subject_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1190,6 +1252,82 @@ private static final long serialVersionUID = 0L;
     public Builder clearCount() {
       
       count_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object subject_ = "";
+    /**
+     * <code>string subject = 6;</code>
+     * @return The subject.
+     */
+    public java.lang.String getSubject() {
+      java.lang.Object ref = subject_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subject_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string subject = 6;</code>
+     * @return The bytes for subject.
+     */
+    public com.google.protobuf.ByteString
+        getSubjectBytes() {
+      java.lang.Object ref = subject_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subject_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string subject = 6;</code>
+     * @param value The subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubject(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      subject_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSubject() {
+      
+      subject_ = getDefaultInstance().getSubject();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string subject = 6;</code>
+     * @param value The bytes for subject to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSubjectBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      subject_ = value;
       onChanged();
       return this;
     }

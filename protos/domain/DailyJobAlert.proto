@@ -15,4 +15,5 @@ message DailyJobAlert {
     string header_title = 3;
     string url = 4;
     int32 count = 5;
+    string subject = 6;
 }
